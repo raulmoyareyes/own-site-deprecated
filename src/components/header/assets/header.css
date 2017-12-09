@@ -1,0 +1,23 @@
+.header {
+  background-color: #2f333f;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.header__title {
+  font-size: 3rem;
+  line-height: 1.3em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.header__title--effect {
+  font-weight: 300;
+}
+
+.header__subtitle {
+  font-size: 1.4rem;
+  font-weight: 200;
+  margin: 0;
+}
