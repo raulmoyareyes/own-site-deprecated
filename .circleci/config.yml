@@ -24,8 +24,7 @@ jobs:
       - run: npm test
 
       test:
-        post:
-          - bash <(curl -s https://codecov.io/bash)
+        post: bash <(curl -s https://codecov.io/bash)
 
   deploy-job:
       docker:
