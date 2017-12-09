@@ -7,7 +7,7 @@ jobs:
   build-job:
     docker:
       # specify the version you desire here
-      - image: circleci/node:9.2
+      - image: circleci/node:7.10
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -38,7 +38,7 @@ jobs:
 
   deploy-job:
        docker:
-         - image: circleci/node:9.2
+         - image: circleci/node:7.10
 
        working_directory: /tmp/repo  
        steps:
