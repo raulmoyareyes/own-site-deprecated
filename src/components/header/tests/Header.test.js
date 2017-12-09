@@ -12,6 +12,7 @@ describe('<Header />', function () {
 
   it('should render correctly', function () {
     expect(header).toBeDefined()
+    expect(header.exists()).toBe(true)
     expect(header.is('.header')).toBe(true)
   })
 
