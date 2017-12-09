@@ -2,9 +2,9 @@ version: 2
 jobs:
   build-job:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:9.2
 
-    working_directory: ~/repo
+    working_directory: /tmp/my-project
 
     steps:
       - checkout
@@ -24,14 +24,26 @@ jobs:
       - run: npm test
 
   deploy-job:
-       docker:
-         - image: circleci/node:7.10
+      docker:
+        - image: circleci/node:9.2
 
-       working_directory: ~/repo 
-       steps:
-         - run:
-             name: Deploy Master to Firebase
-             command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+      working_directory: /tmp/my-project
+
+      steps:
+        - checkout
+
+        - restore_cache:
+            keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+        - run: npm install
+
+        - run: npm run build
+
+        - run:
+            name: Deploy Master to Firebase
+            command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
 workflows:
   version: 2
