@@ -21,7 +21,12 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      - run: npm test
+      - run: npm test -- --coverage
+
+      - run:
+          name: Build Success
+          when: on_success
+          command: 'bash <(curl -s https://codecov.io/bash)'
 
   deploy-job:
       docker:
