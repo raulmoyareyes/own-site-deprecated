@@ -2,12 +2,12 @@ import React from 'react'
 
 import Header from '../header'
 
-import './assets/app.css'
+import './assets/home.css'
 
-const App = () => {
+const Home = () => {
     return (
         <Header />
     )
 }
 
-export default App
+export default Home
