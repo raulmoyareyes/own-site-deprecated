@@ -23,8 +23,11 @@ jobs:
         
       - run: npm test
 
-    after_success:
-      - bash <(curl -s https://codecov.io/bash)
+      - run:
+          name: Build Success
+          when: on_success
+          command:
+            - bash <(curl -s https://codecov.io/bash)
 
   deploy-job:
       docker:
