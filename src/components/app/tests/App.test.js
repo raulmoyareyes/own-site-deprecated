@@ -12,7 +12,7 @@ describe('<App />', function () {
 
   it('should render correctly', function () {
     expect(app).toBeDefined()
-    expect(app.exists()).toBe(true)
+    expect(app.exists()).toBeTruthy()
   })
 
 })

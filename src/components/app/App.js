@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Header from '../header'
+import Section from '../section'
 
 import './assets/app.css'
 
 const App = () => {
-    return (
-        <Header />
-    )
+  return (
+    <Fragment>
+      <Header />
+      <Section />
+    </Fragment>
+  )
 }
 
 export default App
