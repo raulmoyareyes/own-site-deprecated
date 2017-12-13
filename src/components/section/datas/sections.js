@@ -9,6 +9,12 @@ export default [
     id: 2,
     title: "EXPERIENCIA LABORAL",
     subtitle: "Mis puestos anteriores",
-    theme: 2,
-  }
+    theme: 0,
+  },
+  {
+    id: 3,
+    title: "EDUCACIÓN Y CURSOS",
+    subtitle: "Lo que he hecho en mi carrera académica",
+    theme: 1,
+  },
 ]
