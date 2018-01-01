@@ -17,10 +17,10 @@
     "babel-loader": "^7.1.2",
     "babel-preset-react-app": "^3.1.0",
     "babel-runtime": "^6.26.0",
-    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
     "chalk": "1.1.3",
     "css-loader": "^0.28.7",
-    "dotenv": "4.0.0",
+    "dotenv": "^4.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.14.0",
@@ -36,6 +36,7 @@
     "fs-extra": "5.0.0",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
+    "jest-junit": "^3.4.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "^2.0.9",
     "raf": "^3.4.0",
@@ -50,19 +51,30 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom --ci --testResultsProcessor=jest-junit --coverage",
+    "test:watch": "node scripts/test.js --env=jsdom"
   },
   "jest": {
+    "coverageDirectory": "results/coverage",
+    "coverageReporters": [
+      "lcov",
+      "text-summary",
+      "clover"
+    ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "src/components/**/*.{js,jsx,mjs}",
+      "src/containers/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js",
       "<rootDir>/config/jest/enzyme.js"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/__tests__/?(*.)(spec|test).{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/__test?(s)__/"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
@@ -86,6 +98,10 @@
       "jsx",
       "node"
     ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "results/tests/jest-junit.xml"
   },
   "babel": {
     "presets": [

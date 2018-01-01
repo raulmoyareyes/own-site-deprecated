@@ -21,7 +21,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      - run: npm run build
+      - run: npm run build -- --env=sta
 
       - run: npm test -- --coverage
 
@@ -30,7 +30,7 @@ jobs:
           when: on_success
           command: 'bash <(curl -s https://codecov.io/bash)'
 
-  deploy-job:
+  deploy-sta-job:
       docker:
         - image: circleci/node:9.2
 
@@ -46,7 +46,7 @@ jobs:
 
         - run: npm install
 
-        - run: npm run build
+        - run: npm run build -- --env=sta
 
         - run:
             name: Deploy Master to Firebase
@@ -57,9 +57,15 @@ workflows:
   build-deploy:
     jobs:
       - build-job
-      - deploy-job:
+      - deploy-sta-job:
           requires:
             - build-job
           filters:
             branches:
-              only: master
+              only: develop
+      # - deploy-prod-job:
+      #   requires:
+      #     - build-job
+      #   filters:
+      #     branches:
+      #       only: master
