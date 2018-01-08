@@ -38,7 +38,7 @@
     "jest": "^22.0.4",
     "jest-junit": "^3.4.1",
     "postcss-flexbugs-fixes": "3.2.0",
-    "postcss-loader": "^2.0.9",
+    "postcss-loader": "^2.0.10",
     "raf": "^3.4.0",
     "react-dev-utils": "^4.2.1",
     "style-loader": "^0.19.1",
