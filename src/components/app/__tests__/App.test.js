@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import App from '../'
+import { App } from '../../app'
 
 describe('<App />', function () {
   let app

@@ -1,17 +1,26 @@
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
-const paths = require('./paths');
+const paths = require('../paths');
+const chalk = require('chalk');
 
 // Make sure that including paths.js after env.js will read .env variables.
-delete require.cache[require.resolve('./paths')];
+delete require.cache[require.resolve('../paths')];
 
-const NODE_ENV = process.env.NODE_ENV;
-if (!NODE_ENV) {
-  throw new Error(
-    'The NODE_ENV environment variable is required but was not specified.'
+const arg = process.argv.find(arg => arg.startsWith('--env='))
+let NODE_ENV = arg && arg.replace('--env=','')
+
+if (!NODE_ENV && process.env.NODE_ENV !== 'development') {
+  console.log(chalk.red('The NODE_ENV environment variable is required but was not specified.\n'));
+  console.log(
+    'Maybe you should use ' +
+      chalk.cyan('npm run build -- --env=local') +
+      ' to build.\n'
   );
+  process.exit(1);
+}
+
+if (process.env.NODE_ENV === 'development') {
+  NODE_ENV = process.env.NODE_ENV
 }
 
 // https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use

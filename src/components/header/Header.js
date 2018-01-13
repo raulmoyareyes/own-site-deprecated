@@ -2,7 +2,7 @@ import React from 'react'
 
 import './assets/header.css'
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className="header">
       <h1 className="header__title">
@@ -14,5 +14,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

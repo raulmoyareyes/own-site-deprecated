@@ -14,8 +14,6 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
 
-      - run: npm run build
-
       - run: npm install
 
       - save_cache:
@@ -23,6 +21,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
+      - run: npm run build -- --env=sta
+
       - run: npm test -- --coverage
 
       - run:
@@ -46,7 +46,7 @@ jobs:
 
         - run: npm install
 
-        - run: npm run build
+        - run: npm run build -- --env=sta
 
         - run:
             name: Deploy Master to Firebase

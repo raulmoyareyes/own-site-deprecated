@@ -1,6 +1,6 @@
 {
   "name": "own-site",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
@@ -10,59 +10,71 @@
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.2",
+    "autoprefixer": "^7.2.4",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.3",
-    "babel-jest": "^21.2.0",
+    "babel-eslint": "^8.1.2",
+    "babel-jest": "^22.0.4",
     "babel-loader": "^7.1.2",
     "babel-preset-react-app": "^3.1.0",
     "babel-runtime": "^6.26.0",
-    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
     "chalk": "1.1.3",
-    "css-loader": "^0.28.7",
-    "dotenv": "4.0.0",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "eslint": "^4.13.1",
+    "css-loader": "^0.28.8",
+    "dotenv": "^4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.15.0",
     "eslint-config-react-app": "^2.0.1",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-flowtype": "2.40.1",
+    "eslint-plugin-flowtype": "2.41.0",
     "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.5.1",
     "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.5",
+    "file-loader": "^1.1.6",
     "firebase-tools": "^3.16.0",
-    "fs-extra": "3.0.1",
+    "fs-extra": "5.0.0",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^21.2.1",
+    "jest": "^22.0.4",
+    "jest-junit": "^3.4.1",
     "postcss-flexbugs-fixes": "3.2.0",
-    "postcss-loader": "^2.0.9",
+    "postcss-loader": "^2.0.10",
     "raf": "^3.4.0",
     "react-dev-utils": "^4.2.1",
-    "style-loader": "^0.19.0",
+    "style-loader": "^0.19.1",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7",
+    "webpack-dev-server": "^2.10.0",
     "webpack-manifest-plugin": "^1.3.2"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom --ci --testResultsProcessor=jest-junit --coverage",
+    "test:watch": "node scripts/test.js --env=jsdom"
   },
   "jest": {
+    "coverageDirectory": "results/coverage",
+    "coverageReporters": [
+      "lcov",
+      "text-summary",
+      "clover"
+    ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "src/components/**/*.{js,jsx,mjs}",
+      "src/containers/**/*.{js,jsx,mjs}"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js",
       "<rootDir>/config/jest/enzyme.js"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/__tests__/?(*.)(spec|test).{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/__test?(s)__/"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
@@ -86,6 +98,10 @@
       "jsx",
       "node"
     ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "results/tests/jest-junit.xml"
   },
   "babel": {
     "presets": [
