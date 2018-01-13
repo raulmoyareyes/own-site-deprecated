@@ -4,17 +4,25 @@ export default [
     title: 'SOBRE MI',
     subtitle: 'Una pequeña introducción para conocernos mejor',
     theme: 1,
+    visible: true,
+    content: [ 
+      { type: 'paragraph', id: '1' },
+      { type: 'paragraph', id: '2' },
+      { type: 'paragraph', id: '3' },
+    ],
   },
   {
     id: 2,
     title: "EXPERIENCIA LABORAL",
     subtitle: "Mis puestos anteriores",
     theme: 0,
+    visible: false,
   },
   {
     id: 3,
     title: "EDUCACIÓN Y CURSOS",
     subtitle: "Lo que he hecho en mi carrera académica",
     theme: 1,
+    visible: false,
   },
 ]
