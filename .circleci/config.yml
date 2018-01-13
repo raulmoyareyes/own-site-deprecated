@@ -63,9 +63,3 @@ workflows:
           filters:
             branches:
               only: develop
-      # - deploy-prod-job:
-      #   requires:
-      #     - build-job
-      #   filters:
-      #     branches:
-      #       only: master
