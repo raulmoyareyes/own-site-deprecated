@@ -30,7 +30,7 @@ jobs:
           when: on_success
           command: 'bash <(curl -s https://codecov.io/bash)'
 
-  deploy-sta-job:
+  deploy-job:
       docker:
         - image: circleci/node:9.2
 
@@ -57,9 +57,9 @@ workflows:
   build-deploy:
     jobs:
       - build-job
-      - deploy-sta-job:
+      - deploy-job:
           requires:
             - build-job
           filters:
             branches:
-              only: develop
+              only: master
