@@ -1,24 +1,37 @@
 .section {
-  background-color: #fff;
-  padding: 4rem 0;
-}
-
-.section--hightlight {
-  background-color: #00bdbd;
-  color: #fff;
+  background-color: #FBFAF9;
+  padding: 5rem 0;
 }
 
 .section__title {
-  text-align: center;
+  max-width: 75%;
+  margin: 0 auto;
   font-weight: 400;
-  margin: 0;
   line-height: 1.7em;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .section__subtitle {
-  text-align: center;
+  color: #BBB;
+  max-width: 75%;
+  margin: 0 auto 2em auto;
   font-weight: 300;
-  margin: 0;
-  line-height: 1.3em;
+  line-height: 1.2em;
+  font-size: 1.2rem;
+}
+
+.section--dark {
+  background-color: #323231;
+  color: #FBFAF9;
+  font-weight: 300;
+}
+
+.section--hightlight {
+  background-color: #1DCA7F;
+  color: #FBFAF9;
+  font-weight: 300;
+}
+
+.section--hightlight .section__subtitle {
+  color: #323231;
 }

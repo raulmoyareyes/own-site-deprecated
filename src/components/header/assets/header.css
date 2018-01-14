@@ -1,23 +1,27 @@
 .header {
-  background-color: #2f333f;
-  color: #fff;
-  text-align: center;
-  padding: 5rem 0;
+  background-color: #222220;
+  color: #BBB;
+  text-align: left;
+  padding: 6rem 0;
 }
 
 .header__title {
-  font-size: 3rem;
+  color: #FBFAF9;
+  font-size: 5rem;
   line-height: 1.3em;
-  font-weight: 400;
-  margin: 0;
+  font-weight: 300;
+  max-width: 75%;
+  margin: 8rem auto 0 auto;
 }
 
 .header__title--effect {
-  font-weight: 300;
+  font-weight: 600;
+  color: #1DCA7F;
 }
 
 .header__subtitle {
   font-size: 1.4rem;
-  font-weight: 200;
-  margin: 0;
+  font-weight: 300;
+  max-width: 75%;
+  margin: 0 auto;
 }

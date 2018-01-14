@@ -46,7 +46,7 @@ jobs:
 
         - run: npm install
 
-        - run: npm run build -- --env=sta
+        - run: npm run build -- --env=production
 
         - run:
             name: Deploy Master to Firebase
