@@ -1,4 +1,5 @@
 export default {
   0: 'default',
-  1: 'hightlight',
+  1: 'dark',
+  2: 'hightlight',
 }

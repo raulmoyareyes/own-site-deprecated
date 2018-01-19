@@ -16,7 +16,7 @@ export const Section = ({ title, subtitle, content, theme = 0 }) => {
       <h3 className="section__title">{ title }</h3>
       <h4 className="section__subtitle">{ subtitle }</h4>
 
-      { content.map( item => 
+      { content && content.map( item => 
         <Paragraph key={ item.id } { ...PARAGRAPHS[item.id] } />
       ) }
 

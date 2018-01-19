@@ -1,20 +1,20 @@
 <testsuites name="jest tests">
-  <testsuite name="&lt;Section /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-13T20:54:41" time="1.142" tests="2">
-    <testcase classname="&lt;Section /&gt; should render correctly" name="&lt;Section /&gt; should render correctly" time="0.005">
+  <testsuite name="&lt;Section /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-14T00:37:59" time="2.125" tests="2">
+    <testcase classname="&lt;Section /&gt; should render correctly" name="&lt;Section /&gt; should render correctly" time="0.008">
     </testcase>
     <testcase classname="&lt;Section /&gt; should render with section--* class name if has a theme" name="&lt;Section /&gt; should render with section--* class name if has a theme" time="0.004">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;App /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-13T20:54:43" time="0.046" tests="1">
+  <testsuite name="&lt;App /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-14T00:38:02" time="0.232" tests="1">
     <testcase classname="&lt;App /&gt; should render correctly" name="&lt;App /&gt; should render correctly" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Header /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-13T20:54:43" time="0.023" tests="1">
+  <testsuite name="&lt;Header /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-14T00:38:02" time="0.022" tests="1">
     <testcase classname="&lt;Header /&gt; should render correctly" name="&lt;Header /&gt; should render correctly" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Paragraph /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-13T20:54:43" time="0.02" tests="1">
-    <testcase classname="&lt;Paragraph /&gt; should render correctly" name="&lt;Paragraph /&gt; should render correctly" time="0.002">
+  <testsuite name="&lt;Paragraph /&gt;" errors="0" failures="0" skipped="0" timestamp="2018-01-14T00:38:02" time="0.024" tests="1">
+    <testcase classname="&lt;Paragraph /&gt; should render correctly" name="&lt;Paragraph /&gt; should render correctly" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

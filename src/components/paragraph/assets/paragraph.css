@@ -1,5 +1,7 @@
 .paragraph {
-  max-width: 1200px;
+  max-width: 75%;
   margin: 1.3em auto;
-  font-weight: 200;
+  box-sizing: border-box;
+  padding-right: 20%;
+  line-height: 1.5em;
 } 
