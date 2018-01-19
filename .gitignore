@@ -4,8 +4,7 @@
 /node_modules
 
 # testing
-/coverage
-results/
+/results
 
 # production
 /build
