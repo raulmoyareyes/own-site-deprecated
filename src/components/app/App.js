@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 
+import { Menu } from '../menu'
 import { Header } from '../header'
 import { Section } from '../section'
 
@@ -9,11 +10,13 @@ import SECTIONS from '../../datas/sections'
 import './assets/app.css'
 
 export const App = () => {
-  const section = SECTIONS[0]
   return (
     <Fragment>
+      <Menu />
       <Header />
-      <Section key={ section.id } { ...section } />
+      { SECTIONS.map(section => 
+        section.visible && <Section key={ section.id } { ...section } />
+      ) }
     </Fragment>
   )
 }
