@@ -1,13 +1,16 @@
 .menu {
   position: fixed;
+  background: #222220;
   font-size: 1.1rem;
   font-weight: 300;
-  margin: 1em 2em;
+  padding: 0 2em;
   right: 0;
+  left: 0;
 }
 
 .menu ul {
   display: flex;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
