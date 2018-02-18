@@ -7,11 +7,11 @@
 
 .header__title {
   color: #FBFAF9;
-  font-size: 5rem;
+  font-size: 3rem;
   line-height: 1.3em;
   font-weight: 300;
   max-width: 75%;
-  margin: 8rem auto 0 auto;
+  margin: 5rem auto 0 auto;
 }
 
 .header__title--effect {
@@ -20,8 +20,21 @@
 }
 
 .header__subtitle {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 300;
   max-width: 75%;
   margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+
+  .header__title {
+    font-size: 5rem;
+    margin: 8rem auto 0 auto;
+  }
+
+  .header__subtitle {
+    font-size: 1.4rem;
+  }
+
 }
