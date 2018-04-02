@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { StrictMode } from 'react'
 
 import { Menu } from '../menu'
 import { Header } from '../header'
@@ -11,12 +11,12 @@ import './assets/app.css'
 
 export const App = () => {
   return (
-    <Fragment>
+    <StrictMode>
       <Menu />
       <Header />
-      { SECTIONS.map(section => 
+      { SECTIONS.map(section =>
         section.visible && <Section key={ section.id } { ...section } />
       ) }
-    </Fragment>
+    </StrictMode>
   )
 }
