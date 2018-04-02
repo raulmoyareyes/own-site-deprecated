@@ -1,3 +1,5 @@
+const browsers = require('./browsers');
+
 const colors = {
   'primary': 'rgba(0, 171, 97, 1)',
 }
@@ -10,7 +12,7 @@ module.exports = ({ file, options }) => ({
   plugins: {
     'postcss-flexbugs-fixes': {},
     'postcss-cssnext': {
-      'browsers': options.browsers,
+      'browsers': browsers,
       'features': {
         customProperties: {
           variables: {

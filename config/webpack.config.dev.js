@@ -9,9 +9,8 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const paths = require('./paths');
 const getClientEnvironment = require('./env');
-const browsers = require('./browsers');
+const paths = require('./paths');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -169,9 +168,6 @@ module.exports = {
                 options: {
                   config: {
                     path: 'config/postcss.config.js',
-                    ctx: {
-                      browsers,
-                    },
                   },
                 },
               },
