@@ -55,7 +55,7 @@
     "build": "node scripts/build.js",
     "build:dev": "npm run build -- --env=local",
     "test": "node scripts/test.js --env=jsdom --ci --testResultsProcessor=jest-junit --coverage",
-    "test:watch": "node scripts/test.js --env=jsdom"
+    "test:watch": "node scripts/test.js --env=jsdom --watch --coverage"
   },
   "jest": {
     "coverageDirectory": "results/coverage",
