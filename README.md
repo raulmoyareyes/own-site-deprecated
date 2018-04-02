@@ -19,3 +19,18 @@
 [license-url]: https://github.com/raulmoyareyes/own-site/blob/master/LICENSE
 
 Create own site with dynamic layout and admin it with Firebase
+
+Boilerplate based on [create-react-app@v1.1.1](https://github.com/facebook/create-react-app/releases/tag/v1.1.1)
+
+## Extra configuration
+This boilerplate has some extra config after launch the eject script on create-react-app to use React in production.
+
+ - PostCSS and CSSNext packages.
+ - Browsers config file.
+ - Pass the environment in the build script is mandatory.
+ - All dependencies updated.
+
+In the future
+ - Use Redux
+ - Use SSR
+ - Install cypress to e2e test
