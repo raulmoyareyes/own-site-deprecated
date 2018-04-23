@@ -3,7 +3,7 @@
   "version": "0.7.0",
   "private": true,
   "dependencies": {
-    "react": "^16.3.1",
+    "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "whatwg-fetch": "^2.0.4",
     "promise": "^8.0.1",
