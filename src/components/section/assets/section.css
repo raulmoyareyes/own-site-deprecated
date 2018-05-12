@@ -1,6 +1,7 @@
 .section {
-  background-color: #FBFAF9;
+  background-color: var(--white);
   padding: 5rem 0;
+  color: var(--dark);
 }
 
 .section__title {
@@ -12,7 +13,7 @@
 }
 
 .section__subtitle {
-  color: #BBB;
+  color: #737373;
   max-width: 75%;
   margin: 0 auto 2em auto;
   font-weight: 300;
@@ -21,17 +22,17 @@
 }
 
 .section--dark {
-  background-color: #323231;
-  color: #FBFAF9;
+  background-color: var(--dark);
+  color: var(--white);
   font-weight: 300;
 }
 
-.section--hightlight {
-  background-color: #1DCA7F;
-  color: #FBFAF9;
+.section--highlight {
+  background-color: var(--highlight);
+  color: var(--white);
   font-weight: 300;
-}
 
-.section--hightlight .section__subtitle {
-  color: #323231;
+  & .section__subtitle {
+    color: var(--dark);
+  }
 }
