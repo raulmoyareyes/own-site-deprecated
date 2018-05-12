@@ -1,17 +1,20 @@
 # Own Site
 
+[![GitHub release][relese-image] ][relese-url]
 [![Circle CI][circle-ci-image] ][circle-ci-url]
 [![Codecov][codecov-image] ][codecov-url]
-[![GitHub release][relese-image] ][relese-url]
+[![Codacy Badge][codacy-image]][codacy-url]
 [![David][dependencies-image] ]()
 [![David][devdependencies-image] ]()
 [![license][license-image] ][license-url]
 
+[relese-image]: https://img.shields.io/github/release/raulmoyareyes/own-site.svg
 [circle-ci-image]: https://img.shields.io/circleci/project/github/raulmoyareyes/own-site.svg
 [circle-ci-url]: https://circleci.com/gh/raulmoyareyes/own-site
 [codecov-image]: https://img.shields.io/codecov/c/github/raulmoyareyes/own-site.svg
 [codecov-url]: https://codecov.io/gh/raulmoyareyes/own-site
-[relese-image]: https://img.shields.io/github/release/raulmoyareyes/own-site.svg
+[codacy-image]: https://api.codacy.com/project/badge/Grade/6204426a82e548d7b3a08550f5597240
+[codacy-url]: https://www.codacy.com/app/raulmoyareyes/own-site
 [relese-url]: https://github.com/raulmoyareyes/own-site/releases
 [dependencies-image]: https://img.shields.io/david/raulmoyareyes/own-site.svg
 [devdependencies-image]: https://img.shields.io/david/dev/raulmoyareyes/own-site.svg

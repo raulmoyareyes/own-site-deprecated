@@ -5,7 +5,7 @@ export default [
     subtitle: 'Una pequeña introducción para conocernos mejor',
     theme: 0,
     visible: true,
-    content: [ 
+    content: [
       { type: 'paragraph', id: '1' },
       { type: 'paragraph', id: '2' },
       { type: 'paragraph', id: '3' },
@@ -17,7 +17,7 @@ export default [
     subtitle: "Mis puestos anteriores",
     theme: 1,
     visible: false,
-    content: [ 
+    content: [
       { type: 'paragraph', id: '1' },
       { type: 'paragraph', id: '2' },
       { type: 'paragraph', id: '3' },
@@ -29,18 +29,10 @@ export default [
     subtitle: "Lo que he hecho en mi carrera académica",
     theme: 2,
     visible: false,
-    content: [ 
+    content: [
       { type: 'paragraph', id: '1' },
       { type: 'paragraph', id: '2' },
       { type: 'paragraph', id: '3' },
     ],
-  },
-  {
-    id: 4,
-    title: "",
-    subtitle: "",
-    theme: 1,
-    visible: true,
-    content: [],
   },
 ]
