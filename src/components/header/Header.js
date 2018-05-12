@@ -9,7 +9,7 @@ export const Header = () => {
         raú<span className="header__title--effect">l:</span>moya
       </h1>
       <h2 className="header__subtitle">
-        Frontend Engineer & Javascript Developer
+        Software Engineer & Javascript Developer
       </h2>
     </header>
   )

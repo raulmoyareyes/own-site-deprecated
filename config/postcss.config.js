@@ -1,7 +1,9 @@
 const browsers = require('./browsers');
 
 const colors = {
-  'primary': 'rgba(0, 171, 97, 1)',
+  'white': '#FBFAF9',
+  'dark': '#323231',
+  'highlight': '#1DCA7F',
 }
 
 const mediaQueries = {

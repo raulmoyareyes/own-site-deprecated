@@ -20,7 +20,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
       - run: npm run build -- --env=sta
 
       - run: npm test -- --coverage
