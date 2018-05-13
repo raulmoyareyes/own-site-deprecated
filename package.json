@@ -3,11 +3,11 @@
   "version": "0.8.0",
   "private": true,
   "dependencies": {
+    "object-assign": "^4.1.1",
+    "promise": "^8.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "whatwg-fetch": "^2.0.4",
-    "promise": "^8.0.1",
-    "object-assign": "^4.1.1"
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^8.4.1",
