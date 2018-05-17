@@ -3,18 +3,18 @@ import { shallow } from 'enzyme'
 
 import { Paragraph } from '../../paragraph'
 
-describe('<Paragraph />', function () {
+describe('<Paragraph />', () => {
   const props = {
     text: 'hello world!',
   }
 
   let paragraph
 
-  beforeEach(function () {
+  beforeEach(() => {
     paragraph = shallow(<Paragraph { ...props }/>)
   })
 
-  it('should render correctly', function () {
+  it('should render correctly', () => {
     expect(paragraph).toBeDefined()
     expect(paragraph.exists()).toBeTruthy()
   })

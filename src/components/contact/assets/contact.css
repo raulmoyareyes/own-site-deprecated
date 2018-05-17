@@ -1,0 +1,45 @@
+.contact {
+  background: #222222;
+  color: #999999;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  & .contact__title {
+    max-width: 75%;
+    font-weight: 400;
+    line-height: 1.2em;
+    font-size: 2rem;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  & .contact__info {
+    max-width: 35%;
+    width: 35%;
+    box-sizing: border-box;
+    padding: 0 2rem 0 0;
+  }
+
+  & p {
+    margin: 1em auto;
+    box-sizing: border-box;
+    line-height: 1.5em;
+  }
+
+  & h4 {
+    color: #737373;
+    font-weight: 300;
+    line-height: 1.2em;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+
+  & .contact__form {
+    max-width: 40%;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 0 0 0 2rem;
+  }
+}

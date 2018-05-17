@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { string, array, number } from 'prop-types'
 
 import { Paragraph } from '../paragraph'
 
-import THEMES from '../../datas/themes'
-import PARAGRAPHS from '../../datas/paragraphs'
+import THEMES from '../../data/themes'
+import PARAGRAPHS from '../../data/paragraphs'
 
 import './assets/section.css'
 
@@ -16,7 +16,7 @@ export const Section = ({ title, subtitle, content, theme = 0 }) => {
       <h3 className="section__title">{ title }</h3>
       <h4 className="section__subtitle">{ subtitle }</h4>
 
-      { content && content.map( item => 
+      { content && content.map( item =>
         <Paragraph key={ item.id } { ...PARAGRAPHS[item.id] } />
       ) }
 
@@ -25,8 +25,8 @@ export const Section = ({ title, subtitle, content, theme = 0 }) => {
 }
 
 Section.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  content: PropTypes.array.isRequired,
-  theme: PropTypes.number,
+  title: string.isRequired,
+  subtitle: string.isRequired,
+  content: array.isRequired,
+  theme: number,
 }

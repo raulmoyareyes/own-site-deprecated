@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { App } from './components/app'
+import { Layout } from './components/layout'
 import registerServiceWorker from './services/service-worker'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Layout />, document.getElementById('root'))
 registerServiceWorker()

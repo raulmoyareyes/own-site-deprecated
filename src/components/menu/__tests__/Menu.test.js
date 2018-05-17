@@ -3,18 +3,18 @@ import { shallow } from 'enzyme'
 
 import { Menu } from '../../menu'
 
-describe('<Menu />', function () {
+describe('<Menu />', () => {
   const props = {
     text: 'hello world!',
   }
 
   let menu
 
-  beforeEach(function () {
+  beforeEach(() => {
     menu = shallow(<Menu { ...props }/>)
   })
 
-  it('should render correctly', function () {
+  it('should render correctly', () => {
     expect(menu).toBeDefined()
     expect(menu.exists()).toBeTruthy()
   })
