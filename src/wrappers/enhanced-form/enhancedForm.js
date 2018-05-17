@@ -4,6 +4,8 @@ import { func } from 'prop-types'
 export const enhancedForm = WrappedComponent => {
   class EnhancedForm extends Component {
 
+    static CHECKBOX_TYPE = 'checkbox'
+
     state = {
       form: {},
     }
@@ -19,7 +21,6 @@ export const enhancedForm = WrappedComponent => {
       event.preventDefault()
 
       const { form } = this.state
-      console.log(form)
       this.props.submit(form)
     }
 
@@ -38,7 +39,7 @@ export const enhancedForm = WrappedComponent => {
     }
 
     getValue(target) {
-      if (target.type === 'checkbox') {
+      if (target.type === EnhancedForm.CHECKBOX_TYPE) {
         return target.checked
       }
 
