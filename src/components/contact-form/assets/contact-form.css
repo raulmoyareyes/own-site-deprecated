@@ -1,0 +1,46 @@
+.contact-form {
+  & input,
+  & textarea {
+    display: block;
+    background: none;
+    border: 0;
+    padding: 1rem 0;
+    outline: none;
+    color: white;
+    width: 100%;
+    resize: none;
+    border-bottom: 1px solid #2e2e2e;
+    font-weight: 300;
+    line-height: 1.2em;
+    font-size: 1rem;
+    font-family: var(--lato-font);
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      display: inline-block;
+      width: calc(50% - 1rem);
+    }
+
+    &:nth-child(2) {
+      margin-left: 2rem;
+    }
+  }
+
+  & button {
+    background: none;
+    border: 1px solid #1ecb7e;
+    color: #1ecb7e;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: 200ms all;
+
+    &:hover {
+      background: #1ecb7e;
+      border: 1px solid #1ecb7e;
+      color: #222222;
+    }
+
+  }
+}
