@@ -6,29 +6,31 @@
   padding: 0 2em;
   right: 0;
   left: 0;
-}
+  border-bottom: 1px solid #2e2e2e;
 
-.menu ul {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-}
+  & ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
 
-.menu li {
-  list-style: none;
-  margin: 1em 2em 1em 0;
-}
+  & li {
+    list-style: none;
+    margin: 1em 2em 1em 0;
+  }
 
-.menu a {
-  text-decoration: none;
-  color: #BBB;
-}
+  & a {
+    text-decoration: none;
+    color: #BBB;
+    transition: 200ms all;
 
-.menu a:hover {
-  color: #1DCA7F;
-}
+    &:hover {
+      color: #1DCA7F;
+    }
 
-.menu a.active {
-  color: #FBFAF9;
+    &.active {
+      color: #FBFAF9;
+    }
+  }
 }
