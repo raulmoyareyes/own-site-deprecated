@@ -11,7 +11,12 @@ const fonts = {
 }
 
 const mediaQueries = {
-  'example-viewport': "(min-width: 480px)",
+  'small-viewport': "(min-width: 480px)",
+  'medium-viewport': "(min-width: 768px)",
+  'large-viewport': "(min-width: 992px)",
+  'hd-viewport': "(min-width: 1200px)",
+  'extra-hd-viewport': "(min-width: 1440px)",
+  'full-hd-viewport': "(min-width: 1920px)",
 }
 
 module.exports = ({ file, options }) => ({

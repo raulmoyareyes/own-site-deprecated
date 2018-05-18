@@ -16,10 +16,9 @@
   }
 
   & .contact__info {
-    max-width: 35%;
-    width: 35%;
+    max-width: 75%;
+    width: 100%;
     box-sizing: border-box;
-    padding: 0 2rem 0 0;
   }
 
   & p {
@@ -37,9 +36,24 @@
   }
 
   & .contact__form {
-    max-width: 40%;
-    width: 40%;
+    max-width: 75%;
+    width: 100%;
     box-sizing: border-box;
-    padding: 0 0 0 2rem;
+  }
+
+  @media (--medium-viewport) {
+
+    & .contact__info {
+      max-width: 35%;
+      width: 35%;
+      padding: 0 2rem 0 0;
+    }
+
+    & .contact__form {
+      max-width: 40%;
+      width: 40%;
+      padding: 0 0 0 2rem;
+    }
+
   }
 }
