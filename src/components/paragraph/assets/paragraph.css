@@ -5,9 +5,9 @@
   line-height: 1.5em;
 }
 
-@media (min-width: 640px) {
+@media (--medium-viewport) {
 
-  .paragraph {
+  & .paragraph {
     padding-right: 20%;
   }
 
