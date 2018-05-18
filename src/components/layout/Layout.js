@@ -9,7 +9,7 @@ import { Footer } from '../footer'
 // TODO: Replace with Firebase Database
 import SECTIONS from '../../data/sections'
 
-import './assets/layout.css'
+import './assets/css/layout.css'
 
 export const Layout = () => (
   <StrictMode>
