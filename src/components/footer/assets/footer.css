@@ -7,5 +7,20 @@
   & .footer__content {
     max-width: 75%;
     margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+
+    & span {
+      margin: 0 auto 0 0;
+    }
+
+    & a {
+      color: #999999;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--highlight);
+      }
+    }
   }
 }
