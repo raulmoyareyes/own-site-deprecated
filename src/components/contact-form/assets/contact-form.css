@@ -28,8 +28,8 @@
 
   & button {
     background: none;
-    border: 1px solid #1ecb7e;
-    color: #1ecb7e;
+    border: 1px solid var(--highlight);
+    color: var(--highlight);
     font-size: 1rem;
     padding: 0.5em 1em;
     margin: 1em 0;
