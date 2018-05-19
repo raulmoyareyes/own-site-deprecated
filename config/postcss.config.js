@@ -3,7 +3,7 @@ const browsers = require('./browsers');
 const colors = {
   'white': '#FBFAF9',
   'dark': '#323231',
-  'highlight': '#1DCA7F',
+  'highlight': '#1ecb7e',
 }
 
 const fonts = {

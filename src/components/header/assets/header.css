@@ -15,7 +15,7 @@
 
   & .header__title--effect {
     font-weight: 600;
-    color: #1DCA7F;
+    color: var(--highlight);
   }
 
   & .header__subtitle {

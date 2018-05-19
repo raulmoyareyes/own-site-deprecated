@@ -26,7 +26,7 @@
     transition: 200ms all;
 
     &:hover {
-      color: #1DCA7F;
+      color: var(--highlight);
     }
 
     &.active {
