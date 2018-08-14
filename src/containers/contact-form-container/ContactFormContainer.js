@@ -8,6 +8,12 @@ const EnhancedContactForm = enhancedForm(ContactForm)
 
 export class ContactFormContainer extends PureComponent {
 
+  constructor() {
+    super()
+
+    this.sendEmail = this.sendEmail.bind(this)
+  }
+
   sendEmail(form) {
     Email.send(form)
   }
