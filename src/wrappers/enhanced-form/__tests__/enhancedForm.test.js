@@ -41,7 +41,7 @@ describe('enhancedForm', () => {
 
     enhancedFormComponent.instance().handleSubmit(fakeEvent)
 
-    expect(props.submit).toHaveBeenCalledWith(fakeForm)
+    expect(props.submit).toBeCalledWith(fakeForm)
   })
 
   it('handleChange should set the event info to the state', () => {
@@ -52,16 +52,28 @@ describe('enhancedForm', () => {
     expect(state).toEqual(expectedState)
   })
 
+  describe('resetForm method', () => {
+
+    it('should reset the form if the event is correct', () => {
+      fakeEvent.target.reset = jest.fn()
+
+      enhancedFormComponent.instance().resetForm(fakeEvent)
+
+      expect(fakeEvent.target.reset).toBeCalled()
+    })
+
+  })
+
   describe('getValue method', () => {
 
-    it('should return', () => {
+    it('should return the right value from the event', () => {
       const value = enhancedFormComponent.instance().getValue(fakeEvent.target)
 
       const expectedValue = fakeEvent.target.value
       expect(value).toEqual(expectedValue)
     })
 
-    it('should render correctly', () => {
+    it('should return the boolean from the event when event type is CHECKBOX_TYPE', () => {
       const fakeTarget = {
         ...fakeEvent.target,
         type: EnhancedFormComponent.CHECKBOX_TYPE,

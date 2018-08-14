@@ -19,10 +19,11 @@ export const enhancedForm = WrappedComponent => {
 
     handleSubmit(event) {
       event.preventDefault()
-      event.target.reset()
 
       const { form } = this.state
       this.props.submit(form)
+
+      this.resetForm(event)
     }
 
     handleChange(event) {
@@ -37,6 +38,13 @@ export const enhancedForm = WrappedComponent => {
           ...{ [name] : value },
         }
       }))
+    }
+
+    resetForm(event) {
+      const canReset = event && event.target && event.target.reset
+      if (!canReset) return
+
+      event.target.reset()
     }
 
     getValue(target) {
