@@ -1,0 +1,1 @@
+import '../../src/services/email/__tests__/email.mock'
