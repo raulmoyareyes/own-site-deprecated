@@ -1,1 +1,5 @@
-export { Email } from './Email'
+import { send } from './Email'
+
+export const Email = {
+  send,
+}
