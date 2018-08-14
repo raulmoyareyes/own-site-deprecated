@@ -22,6 +22,8 @@ export const enhancedForm = WrappedComponent => {
 
       const { form } = this.state
       this.props.submit(form)
+
+      this.resetForm(event)
     }
 
     handleChange(event) {
@@ -36,6 +38,13 @@ export const enhancedForm = WrappedComponent => {
           ...{ [name] : value },
         }
       }))
+    }
+
+    resetForm(event) {
+      const canReset = event && event.target && event.target.reset
+      if (!canReset) return
+
+      event.target.reset()
     }
 
     getValue(target) {
@@ -66,5 +75,5 @@ export const enhancedForm = WrappedComponent => {
 }
 
 function getDisplayName(WrappedComponent) {
-  return WrappedComponent && (WrappedComponent.displayName || WrappedComponent.name || 'Component')
+  return WrappedComponent && (WrappedComponent.displayName || WrappedComponent.name)
 }
