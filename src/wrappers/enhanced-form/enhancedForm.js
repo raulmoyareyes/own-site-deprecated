@@ -19,6 +19,7 @@ export const enhancedForm = WrappedComponent => {
 
     handleSubmit(event) {
       event.preventDefault()
+      event.target.reset()
 
       const { form } = this.state
       this.props.submit(form)
@@ -66,5 +67,5 @@ export const enhancedForm = WrappedComponent => {
 }
 
 function getDisplayName(WrappedComponent) {
-  return WrappedComponent && (WrappedComponent.displayName || WrappedComponent.name || 'Component')
+  return WrappedComponent && (WrappedComponent.displayName || WrappedComponent.name)
 }
