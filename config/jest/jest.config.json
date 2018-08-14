@@ -16,12 +16,12 @@
   ],
   "testMatch": [
     "<rootDir>/src/**/__tests__/?(*.)(spec|test).{js,jsx,mjs}",
-    "<rootDir>/src/**/test?(s)/**/?(*)(Spec).js?(x)",
     "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
   ],
   "coveragePathIgnorePatterns": [
     "/__test?(s)__/",
-    "/test?(s)/",
+    "/services/",
+    "/data/",
     "/assets/"
   ],
   "testURL": "http://localhost",

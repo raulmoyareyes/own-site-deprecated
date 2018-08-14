@@ -55,54 +55,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "build:dev": "npm run build -- --env=local",
-    "test": "node scripts/test.js --env=jsdom --ci --testResultsProcessor=jest-junit --coverage",
-    "test:watch": "node scripts/test.js --env=jsdom --watch --coverage"
-  },
-  "jest": {
-    "coverageDirectory": "results/coverage",
-    "coverageReporters": [
-      "lcov",
-      "text-summary",
-      "clover"
-    ],
-    "collectCoverageFrom": [
-      "src/*/**/*.{js,jsx,mjs}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js",
-      "<rootDir>/config/jest/enzyme.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/?(*.)(spec|test).{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/__test?(s)__/",
-      "/services/",
-      "/utils/",
-      "/data/"
-    ],
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "mjs",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
+    "test": "node scripts/test.js --env=jsdom --ci --coverage --config config/jest/jest.config.json",
+    "test:watch": "node scripts/test.js --env=jsdom --watch --coverage --config config/jest/jest.config.json",
+    "test:e2e:open": "cypress open --project ./config/cypress",
+    "test:e2e": "cypress run --project ./config/cypress"
   },
   "jest-junit": {
     "suiteName": "jest tests",
