@@ -5,8 +5,6 @@ import { ContactFormContainer } from '../../contact-form-container'
 import { Email } from '../../../services/email'
 
 describe('<ContactFormContainer />', () => {
-  Email.send = jest.fn()
-
   let contactFormContainer
 
   beforeEach(() => {
