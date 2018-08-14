@@ -1,0 +1,52 @@
+{
+  "rootDir": "../../",
+  "coverageDirectory": "results/coverage",
+  "coverageReporters": [
+    "lcov",
+    "text-summary",
+    "clover"
+  ],
+  "collectCoverageFrom": [
+    "src/*/**/*.{js,jsx,mjs}"
+  ],
+  "setupFiles": [
+    "<rootDir>/config/polyfills.js",
+    "<rootDir>/config/jest/enzyme.js",
+    "<rootDir>/config/jest/mocks.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/?(*.)(spec|test).{js,jsx,mjs}",
+    "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+  ],
+  "coveragePathIgnorePatterns": [
+    "/__test?(s)__/",
+    "/services/",
+    "/data/",
+    "/assets/"
+  ],
+  "testURL": "http://localhost",
+  "transform": {
+    "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+    "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "mjs",
+    "js",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "reporters": [
+    "default",
+    "jest-junit"
+  ]
+}

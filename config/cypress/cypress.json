@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://localhost:3000/",
+  "video": false,
+  "reporter": "junit",
+  "fileServerFolder": "./",
+  "pluginsFile": "./plugins/index.js",
+  "fixturesFolder": "../../e2e-tests/fixtures",
+  "integrationFolder": "../../e2e-tests/features",
+  "supportFile": "support/index.js",
+  "screenshotsFolder": "../../results/screenshots",
+  "chromeWebSecurity": false,
+  "reporterOptions": {
+    "mochaFile": "../../results/tests/e2e-junit.xml",
+    "toConsole": true
+  }
+}

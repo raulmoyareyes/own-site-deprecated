@@ -23,7 +23,7 @@
 
 Create own site with dynamic layout and admin it with Firebase
 
-Boilerplate based on [create-react-app@v1.1.1](https://github.com/facebook/create-react-app/releases/tag/v1.1.1)
+Boilerplate based on [create-react-app@v1.1.4](https://github.com/facebook/create-react-app/releases/tag/v1.1.4)
 
 ## Extra configuration
 This boilerplate has some extra config after launch the eject script on create-react-app to use React in production.
@@ -31,9 +31,9 @@ This boilerplate has some extra config after launch the eject script on create-r
  - PostCSS and CSSNext packages.
  - Browsers config file.
  - Pass the environment in the build script is mandatory.
+ - Install cypress to e2e test with cucumber syntax.
  - All dependencies updated.
 
 In the future
  - Use Redux
  - Use SSR
- - Install cypress to e2e test
