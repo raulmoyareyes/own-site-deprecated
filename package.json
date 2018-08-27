@@ -60,7 +60,7 @@
     "uglifyjs-webpack-plugin": "^1.2.7",
     "url-loader": "^1.1.1",
     "webpack": "^4.16.5",
-    "webpack-dev-server": "^3.1.5",
+    "webpack-dev-server": "^3.1.6",
     "webpack-manifest-plugin": "^2.0.3"
   },
   "scripts": {
