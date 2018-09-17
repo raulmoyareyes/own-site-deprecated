@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "object-assign": "^4.1.1",
-    "promise": "^8.0.1",
+    "promise": "^8.0.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "simple-line-icons": "^2.4.1",
