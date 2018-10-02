@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
-    "@babel/runtime": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
     "autoprefixer": "^9.1.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
