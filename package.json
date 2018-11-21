@@ -6,7 +6,7 @@
     "object-assign": "^4.1.1",
     "promise": "^8.0.2",
     "react": "^16.6.0",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.6.1",
     "simple-line-icons": "^2.4.1",
     "whatwg-fetch": "^3.0.0"
   },
